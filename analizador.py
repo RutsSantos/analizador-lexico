@@ -1,7 +1,6 @@
 import re
 
-
-class LexicalAnalyzer:
+class AnalizadorLexico:
     # Token row
     lin_num = 1
 
@@ -45,13 +44,13 @@ class LexicalAnalyzer:
         tokens_join = '|'.join('(?P<%s>%s)' % x for x in rules)
         lin_start = 0
 
-        # Lists of output for the program
+        # Lista de resultados del programa
         token = []
         lexeme = []
         row = []
         column = []
 
-        # It analyzes the code to find the lexemes and their respective Tokens
+        # Analiza el código y encuentra sus respectivos tekens y lexemas
         for m in re.finditer(tokens_join, code):
             token_type = m.lastgroup
             token_lexeme = m.group(token_type)
@@ -69,7 +68,7 @@ class LexicalAnalyzer:
                     token.append(token_type)
                     lexeme.append(token_lexeme)
                     row.append(self.lin_num)
-                    # To print information about a Token
+                    # Imprime la información de un token
                     print('Token = {0}, Lexema = \'{1}\', Fila = {2}, Columna = {3}'.format(token_type, token_lexeme, self.lin_num, col))
 
         return token, lexeme, row, column

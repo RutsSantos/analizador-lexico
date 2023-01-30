@@ -1,22 +1,20 @@
 from buffer import Buffer
-from analizador import LexicalAnalyzer
+from analizador import AnalizadorLexico
 
 if __name__ == '__main__':
     Buffer = Buffer()
-    Analyzer = LexicalAnalyzer()
+    Analizador = AnalizadorLexico()
 
-    # Lists for every list returned list from the function tokenize
     token = []
     lexeme = []
     row = []
     column = []
 
-    # Tokenize and reload of the buffer
     for i in Buffer.load_buffer():
-        t, lex, lin, col = Analyzer.tokenize(i)
+        t, lex, lin, col = Analizador.tokenize(i)
         token += t
         lexeme += lex
         row += lin
         column += col
 
-    print('\nRecognize Tokens: ', token)
+    print('\nTokens reconocidos: ', token)

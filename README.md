@@ -1,8 +1,8 @@
 # Analizador Léxico
 
-Este es un analizador léxico para el lenguaje C realizado en python.
+Este es un analizador léxico para el lenguaje C realizado en Python.
 
-El archivo [token_lexemas.pdf](https://github.com/christianrfg/lexical-analyzer/blob/master/tokens_lexemes.pdf) muestra los lexemas reconocidos por este analizador léxico
+El archivo [Token_lexemas.pdf](https://github.com/RutsSantos/analizador-lexico/blob/main/Token-lexemas.pdf) muestra los lexemas reconocidos por este analizador léxico
 
 ### Prerequisitos
 
